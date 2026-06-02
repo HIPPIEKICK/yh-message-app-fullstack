@@ -72,7 +72,12 @@ export const App = () => {
         />
       )}
       {error && <p className="error">{error}</p>}
-      <PostMessage newMessage={addNewPost} fetchPosts={fetchPosts} user={user} onUnauthorized={handleUnauthorized} />
+      <PostMessage
+        newMessage={addNewPost}
+        fetchPosts={fetchPosts}
+        user={user}
+        onUnauthorized={handleUnauthorized}
+      />
       <MessageList
         loading={loading}
         messageList={messageList}
@@ -80,7 +85,7 @@ export const App = () => {
         fetchPosts={fetchPosts}
         user={user}
         onUnauthorized={handleUnauthorized}
-      />
+      /> 
     </>
   )
 }
